@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>
+            Pupils
+        </ion-title>
+        <ion-buttons slot="primary">
+            <ion-button color="light" (click)="TODO">
+                <ion-icon slot="icon-only" name="add-circle"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <strong>Summary</strong>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        Total number of pupils : {{pupils.length}}
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        Number of pupils per year of birth :
+                    </ion-col>
+                </ion-row>
+                <ion-row *ngFor="let group of stats | keyvalue">
+                    <ion-col>
+                        {{ group.key }} : {{group.value.length}}
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
+    <ion-list>
+        <ion-item *ngFor="let pupil of pupils">
+            <ion-label>TODO</ion-label>
+            <ion-button slot="end" (click)="TODO" color="danger">
+                <ion-icon name="trash" slot="icon-only"></ion-icon>
+            </ion-button>
+        </ion-item>
+    </ion-list>
+</ion-content>
