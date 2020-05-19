@@ -1,4 +1,4 @@
-# Kidscare Dev Test
+# Dev Test
 
 ## Introduction
 
